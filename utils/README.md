@@ -1,33 +1,45 @@
-# ReadMe Generator
+# lHAra
 
   ## Description:
 
-  This is a ReadMe Generator. It automatically creates a ReadMe via a series of prompts entered into git with the of node.js
+  A3q54hfs
 
   ## Tables of Contents
 
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
   ## Installation
 
-  In order to install the program, it can be copied from the following git: https://github.com/waynecharr/ReadMe_Generator
+  Wayne
 
   ## Usage 
 
-  In order to use this application, a user must first install node.js. Once node.js is installed and the git has been copied to their machine, running node.js will bring up a series of prompts. Enter your infromation as prompted and the readme will automatically generate. 
-
-  ## License
+  Wayne
 
   ## Contributing
 
-  Tutor: Kate Redford.
+  - Users: Wayne
+  - References: 
 
   ## Tests
 
-  In order to test the application, simply run the program by entering "index node.js" into git and following the prompts. Once the prompts have been entered, the Read
+  Wayne
 
   ## Questions
 
   For more information about this application, please see the following: 
 
-  - Github: https://github.com/waynecharr
-  - Email: waynecharrette@gmail.com
+  - Github: https://github.com/314130
+  - Email: lihralehr
+
+  ## License
+
+  - License provided is Apache 2.0. [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+- License link: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
 

@@ -1,23 +1,53 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (!license) {
     return '';
   }
+
+  switch (license) {
+    case 'MIT':
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    case 'Apache 2.0':
+      return '[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    case 'Mozilla Public License (MPL)':
+      return '[![License: MPL](https://img.shields.io/badge/License-MPL-blue.svg)](https://opensource.org/licenses/MPL-2.0)';
+    default:
+      return '';
+  }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// They mean the link in the Table of Contents to the License Section
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (!license) {
+    return '';
+  }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+  switch (license) {
+    case 'MIT':
+      return 'https://opensource.org/licenses/MIT';
+    case 'Apache 2.0':
+      return 'https://opensource.org/licenses/Apache-2.0';
+    case 'Mozilla Public License (MPL)':
+      return 'https://opensource.org/licenses/MPL-2.0';
+    default:
+      return '';
+  }
+}
 
-// TODO: Create a function to generate markdown for README
+
+function renderLicenseSection(license) {
+  if (!license) {
+    return '';
+  }
+
+  const licenseText = `- License provided is ${license}. ${renderLicenseBadge(license)}\n - License link: [${license}](${renderLicenseLink(license)})`;
+
+  return licenseText;
+}
+
+
+
 function generateMarkdown(data) {
   // console.log(data);
+  const license = data.license;
   return `# ${data.title}
 
   ## Description:
@@ -25,6 +55,14 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Tables of Contents
+
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Installation
 
@@ -34,11 +72,10 @@ function generateMarkdown(data) {
 
   ${data.usage_information}
 
-  ## License
-
   ## Contributing
 
-  ${data.contribution_guidelines}
+  - Users: ${data.contribution_guidelines}
+  - References: 
 
   ## Tests
 
@@ -50,6 +87,10 @@ function generateMarkdown(data) {
 
   - Github: https://github.com/${data.github}
   - Email: ${data.email}
+
+  ## License
+
+  ${renderLicenseSection(license)}
 
 `;
 }
