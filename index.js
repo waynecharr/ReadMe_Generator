@@ -8,13 +8,48 @@ const questions = [
      {
         type: 'input',
         name: 'title',
-        message: 'What is your name?',
+        message: 'What is the name of your project?',
+     },
+     {
+        type: 'input',
+        name: 'github',
+        message: 'What is your github user name?',
+     },
+     {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter an email for further communication:',
+     },
+     {
+        type: 'input',
+        name: 'description',
+        message: 'Describe the project you are working/have worked on.',
+     },
+     {
+        type: 'input',
+        name: 'installation_instructions',
+        message: 'Describe how the end user will install the program.',
+     },
+     {
+        type: 'input',
+        name: 'usage_information',
+        message: 'Describe instructions and examples for use.',
+     },
+     {
+        type: 'input',
+        name: 'contribution_guidelines',
+        message: 'List any collaborators or contributors to your application.',
+     },
+     {
+        type: 'input',
+        name: 'test_instructions',
+        message: 'Please provide a detailed explanation of how to test your application.',
      },
      {
         type: 'list',
-        message: 'What is your preferred method of communication?',
-        name: 'contact',
-        choices: ['email', 'phone', 'telekinesis'],
+        message: 'What license are you using?',
+        name: 'license',
+        choices: ['MIT', 'Apache 2.0', 'Mozilla Public License (MPL)'],
       },
 
 ];
