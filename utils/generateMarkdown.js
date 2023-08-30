@@ -59,10 +59,10 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
-  - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+  - [License](#license)
 
   ## Installation
 
@@ -74,8 +74,8 @@ function generateMarkdown(data) {
 
   ## Contributing
 
-  - Users: ${data.contribution_guidelines}
-  - References: 
+  - Users: ${data.contributer}
+  - References: ${data.link_reference}
 
   ## Tests
 
@@ -83,7 +83,7 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  For more information about this application, please see the following: 
+  For more information or questions about this application, please see the following: 
 
   - Github: https://github.com/${data.github}
   - Email: ${data.email}

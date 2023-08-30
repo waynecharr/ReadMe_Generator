@@ -37,8 +37,13 @@ const questions = [
      },
      {
         type: 'input',
-        name: 'contribution_guidelines',
+        name: 'contributer',
         message: 'List any collaborators or contributors to your application.',
+     },
+     {
+        type: 'input',
+        name: 'link_reference',
+        message: 'Please include any links that helped you with you with your application',
      },
      {
         type: 'input',
