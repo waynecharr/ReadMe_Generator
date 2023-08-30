@@ -28,26 +28,28 @@ function generateMarkdown(data) {
 
   ## Installation
 
-  ${data.description}
+  ${data.installation_instructions}
 
   ## Usage 
 
-  ${data.description}
+  ${data.usage_information}
 
   ## License
 
   ## Contributing
 
-  ${data.description}
+  ${data.contribution_guidelines}
 
   ## Tests
 
-  ${data.description}
+  ${data.test_instructions}
 
   ## Questions
 
-  - For more information plesae contact  ${data.github}
-  - For more information plesae contact  ${data.email}
+  For more information about this application, please see the following: 
+
+  - Github: https://github.com/${data.github}
+  - Email: ${data.email}
 
 `;
 }
