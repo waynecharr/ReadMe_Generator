@@ -1,3 +1,5 @@
+
+// If the license is blank than it returns nothing, but if if one of the other options is chosen than the license shield is provided. 
 function renderLicenseBadge(license) {
   if (!license) {
     return '';
@@ -15,6 +17,7 @@ function renderLicenseBadge(license) {
   }
 }
 
+// This function takes the choices from the License and provides a corresponding license link.
 function renderLicenseLink(license) {
   if (!license) {
     return '';
@@ -32,7 +35,7 @@ function renderLicenseLink(license) {
   }
 }
 
-
+// combines the previous two functions and creates the license text which is used to propagate the License section of the generateMarkdown function.
 function renderLicenseSection(license) {
   if (!license) {
     return '';
@@ -43,16 +46,19 @@ function renderLicenseSection(license) {
   return licenseText;
 }
 
-
-
+// This function takes the data from the inquirer prompts and generates the ReadMe file.
+// I can't seem to comment within the function here, but the renderLicenseBadge and renderLicense section are both ran within this function.
+// const license is pulled at the start of the function to provide data to the two render functions.
 function generateMarkdown(data) {
   // console.log(data);
   const license = data.license;
   return `# ${data.title}
 
+  ${renderLicenseBadge(license)}
+
   ## Description:
 
-  ${data.description}
+  ${data.description} 
 
   ## Tables of Contents
 

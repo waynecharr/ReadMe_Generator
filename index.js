@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
+//Included packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+//This connects the two documents. 
 const generateMarkdown = require("./utils/generateMarkdown.js")
 
-// TODO: Create an array of questions for user input
+//The question array is a series of questions for user input. 
 const questions = [
      {
         type: 'input',
@@ -37,19 +38,21 @@ const questions = [
      },
      {
         type: 'input',
+        name: 'test_instructions',
+        message: 'Please provide a detailed explanation of how to test your application.',
+     },
+     {
+        type: 'input',
         name: 'contributer',
         message: 'List any collaborators or contributors to your application.',
      },
+     //I added an addition link_reference for common link references, and to seperate the links and contributors. 
      {
         type: 'input',
         name: 'link_reference',
         message: 'Please include any links that helped you with you with your application',
      },
-     {
-        type: 'input',
-        name: 'test_instructions',
-        message: 'Please provide a detailed explanation of how to test your application.',
-     },
+     // This code is slightly different than the others in that it pulls a list of choices. I found three common licenses for my example.
      {
         type: 'list',
         message: 'What license are you using?',
@@ -59,13 +62,13 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
+//This function creates the ReadMe File and appends it to .utils folder. When the the file prompts are completed a Success! appears.
 function writeToFile(data) {
     fs.writeFile("./utils/README.md", data, (err) =>
     err ? console.log(err) : console.log('Success!')
 )}
 
-// TODO: Create a function to initialize app
+// This function initializes the inquirer prompts that run when the user prompts "node index.js"
 function init() {
     inquirer.prompt(questions)
     // .then(function(data))
